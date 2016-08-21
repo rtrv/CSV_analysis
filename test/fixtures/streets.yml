@@ -1,0 +1,9 @@
+lenin_st_irkutsk:
+  name: 'Ленина'
+  city: irkutsk
+  street_type: street
+
+lenin_st_moscow:
+  name: 'Ленина'
+  city: moscow
+  street_type: street

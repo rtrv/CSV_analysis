@@ -1,0 +1,9 @@
+irkutsk_address:
+  street: lenin_st_irkutsk
+  postcode: irkutsk_postcode
+  house: '1'
+
+moscow_address:
+  street: lenin_st_moscow
+  postcode: moscow_postcode
+  house: '3'

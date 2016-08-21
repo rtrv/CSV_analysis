@@ -1,0 +1,5 @@
+first:
+  customer: first_customer
+  product: apple
+  value: 100
+  vendor: foodshop

@@ -1,0 +1,8 @@
+first_customer:
+  raw_name: 'Иван Иванов'
+
+second_customer:
+  raw_name: 'Алексеев Алексей Алексеевич'
+  first_name: 'Алексей'
+  middle_name: 'Алексеевич'
+  last_name: 'Алексеев'
