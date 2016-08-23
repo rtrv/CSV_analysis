@@ -13,19 +13,16 @@ module Transactions
           csv.each do |row|
             row = row.to_hash
 
-            vendor = Vendor.find_or_create_by(name: row['vendor'])
+            product_category = ProductCategory.find_or_create_by(name: row['product_category'])
+            product = Product.find_or_create_by(name: row['product_name'], product_category: product_category)
 
+            vendor = Vendor.find_or_create_by(name: row['vendor'])
             customer = Customer.find_or_create_by(raw_name: row['customer_name'])
 
             phone = Phone.find_or_create_by(value: row['phone'], customer: customer)
 
             city = City.find_or_create_by(name: row['city'])
-
             postcode = Postcode.find_or_create_by(value: row['zip_code'], city: city)
-
-            product_category = ProductCategory.find_or_create_by(name: row['product_category'])
-
-            product = Product.find_or_create_by(name: row['product_name'], product_category: product_category)
 
             transaction = Transaction.new(value: row['value'], customer: customer, product: product, vendor: vendor)
 
